@@ -2,7 +2,7 @@
 #include <vector>
 #include "make_random_vector.hpp"
 using namespace std;
-
+int x;
 int main()
 {
     vector v1 = make_random_vector(10, 0, 10);
@@ -22,7 +22,11 @@ int main()
         cout << e << " ";
     cout << endl;
 
-    cout << count_if(v2.begin(), v2.end(), [](int a){return a > 7;}) << endl;
+    // cout << count_if(v2.begin(), v2.end(), [](int a){return a > 7;}) << endl;
+
+    cin >> x;
+
+    cout << count_if(v2.begin(), v2.end(), [](int a){return a > x;}) << endl;
 
     sort(v2.begin(), v2.end(), greater<int>());
     for(int e : v2)
