@@ -17,4 +17,16 @@ int main()
         cout << e << " ";
     cout << endl;
 
+    vector v2 = make_random_vector(10, 0, 10);
+    for(int e : v2)
+        cout << e << " ";
+    cout << endl;
+
+    cout << count_if(v2.begin(), v2.end(), [](int a){return a > 7;}) << endl;
+
+    sort(v2.begin(), v2.end(), greater<int>());
+    for(int e : v2)
+        cout << e << " ";
+    cout << endl;
+
 }
